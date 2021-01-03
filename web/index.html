@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Simple Room Reservation Web Application</title>
+         <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+    $(document).ready(function(){
+         $("form").submit(function(){
+              var x = $("input[type = 'radio']:checked");  
+             if(x.length>0)  
+             { 
+                 return true;     
+             }  
+             else {  
+                    alert("Please select room type")
+                    return false;  
+             }  
+     });
+    });
+</script>
+    </head>
+    <body>
+         <table>
+    <tr>
+
+      <td>
+          
+        <div class="container">
+        <form method="post" action="Computation" id="form_1">
+        
+            <div class="form-group">   
+                <label for="gender">Select a room Type</label>
+                <input type="radio" value="Delux" name="txtType" /><font color="black"> Delux</font>
+                <input type="radio" value="Super Delux" name="txtType" /><font color="black"> Super Delux</font>
+                <input type="radio" value="Suit" name="txtType" /><font color="black"> Suit</font>
+            </div>
+            <div class="form-group">
+              <label for="name">Enter Your Name</label>
+              <input size="40" type="text" class="form-control" name="txtCust" />
+            </div>
+            <div class="form-group">
+              <label for="mob">Enter Mobile No.</label>
+              <input  size="40" type="text" class="form-control" name="txtMob" />
+            </div>
+             <div class="form-group">
+            <input type="reset" >
+            <input type="submit" value="Book Room">
+             </div>
+        </form>
+        </div>
+      </td>
+    </tr>
+         </table>
+        
+    </body>
+    
+</html>
